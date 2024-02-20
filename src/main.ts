@@ -69,8 +69,8 @@ getWalletConnectModalSignClient().then(async (client) => {
       topic: session?.topic,
       chainId: 'aleo:1',
       request: {
-        jsonrpc: '2.0',
         method: 'getSelectedAccount',
+        params: {}
       },
     });
   

@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@puzzlehq/sdk-core':
-    specifier: ^0.2.9
-    version: 0.2.9
+    specifier: 0.2.18
+    version: 0.2.18
 
 devDependencies:
   '@walletconnect/types':
@@ -374,8 +374,8 @@ packages:
       '@parcel/watcher-win32-x64': 2.4.0
     dev: true
 
-  /@puzzlehq/sdk-core@0.2.9:
-    resolution: {integrity: sha512-5ecUBbiU1G2n3FHPbJdMz59BOPPhVwfLuzg4LrxmYwwusy0FG+kYtz9EDVrmsYAAel7kEHPRcBvzCxrzke+w+A==}
+  /@puzzlehq/sdk-core@0.2.18:
+    resolution: {integrity: sha512-efcI56dSPn21+sZabZYA2HrzDoZnF7PpsLLnkTJTYvuYecZdkjMsTtjayy5YcAQRMTw7IcgtVjFVMlFdeOx87g==}
     dev: false
 
   /@rollup/rollup-android-arm-eabi@4.12.0:
