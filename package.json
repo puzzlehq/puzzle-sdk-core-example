@@ -9,10 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@walletconnect/types": "^2.11.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.0"
   },
   "dependencies": {
-    "@puzzlehq/sdk-core": "^0.2.5"
+    "@puzzlehq/sdk-core": "^0.2.9"
   }
 }

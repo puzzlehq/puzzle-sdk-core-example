@@ -2,7 +2,8 @@ import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupConnection } from './connection.ts'
-import { GetSelectedAccountResponse, SessionTypes, configureConnection, getWalletConnectModalSignClient } from '@puzzlehq/sdk-core';
+import { GetSelectedAccountResponse, configureConnection, getWalletConnectModalSignClient } from '@puzzlehq/sdk-core';
+import { SessionTypes } from "@walletconnect/types";
 
 configureConnection({
   dAppName: "Test Dapp",
@@ -11,8 +12,8 @@ configureConnection({
   dAppIconURL: "https://i.kym-cdn.com/entries/icons/facebook/000/019/123/CRTX93SWIAEHlo5.jpg"
 });
 
-let address: string;
-let session: SessionTypes.Struct;
+let address: string | undefined;
+let session: SessionTypes.Struct | undefined;
 
 export const setAddress = (_address: string) => {
   address = _address
@@ -46,7 +47,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 setupConnection(document.querySelector<HTMLButtonElement>('#connection')!)
 
 getWalletConnectModalSignClient().then(async (client) => {
-  client.onSessionEvent((data) => {
+  client.onSessionEvent((data: any) => {
     console.log('onSessionEvent', data)
     if (data.params.event.name === 'accountSelected') { 
       const address = data.params.event.data.address;
@@ -55,11 +56,11 @@ getWalletConnectModalSignClient().then(async (client) => {
     }
   })
   
-  client.onSessionDelete((data) => {
+  client.onSessionDelete((data: any) => {
     console.log('onSessionDelete', data)
   })
 
-  client.onSessionExpire((data) => {
+  client.onSessionExpire((data: any) => {
     console.log('onSessionExpire', data)
   })
 
