@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@puzzlehq/sdk-core':
-    specifier: 0.2.24
-    version: 0.2.24(buffer@6.0.3)(react@18.2.0)
+    specifier: 0.2.25
+    version: 0.2.25(buffer@6.0.3)(react@18.2.0)
 
 devDependencies:
   '@walletconnect/types':
@@ -431,8 +431,8 @@ packages:
       '@parcel/watcher-win32-ia32': 2.4.0
       '@parcel/watcher-win32-x64': 2.4.0
 
-  /@puzzlehq/sdk-core@0.2.24(buffer@6.0.3)(react@18.2.0):
-    resolution: {integrity: sha512-ero/zrxdmogNhGhd7d0zpZihngsiLr1PDwF2pD//8rUUDulDdforSpmyISS+Pz+62OsjWjr3ATczNRc6WRHRZQ==}
+  /@puzzlehq/sdk-core@0.2.25(buffer@6.0.3)(react@18.2.0):
+    resolution: {integrity: sha512-AmXGHFIntFGCgGzXORHkwBNIePG1DizvGOVbXCO8i/9zOfwm/1348W3ULMq/TM3JSgsSsHUI5dntej2mIm7qBQ==}
     peerDependencies:
       buffer: ^6.0.3
     dependencies:
