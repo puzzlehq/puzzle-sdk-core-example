@@ -67,7 +67,7 @@ getWalletConnectModalSignClient().then(async (client) => {
   if (session) {
     const response: GetSelectedAccountResponse = await client.request({
       topic: session?.topic,
-      chainId: 'aleo:1',
+      chainId: 'aleo:3',
       request: {
         method: 'getSelectedAccount',
         params: {}
