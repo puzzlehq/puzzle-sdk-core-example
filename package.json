@@ -14,6 +14,6 @@
     "vite": "^5.1.0"
   },
   "dependencies": {
-    "@puzzlehq/sdk-core": "0.2.31"
+    "@puzzlehq/sdk-core": "0.2.32"
   }
 }

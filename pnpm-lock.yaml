@@ -2,8 +2,8 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@puzzlehq/sdk-core':
-    specifier: 0.2.31
-    version: 0.2.31(buffer@6.0.3)(react@18.2.0)
+    specifier: 0.2.32
+    version: 0.2.32(buffer@6.0.3)(react@18.2.0)
 
 devDependencies:
   '@walletconnect/types':
@@ -428,8 +428,8 @@ packages:
       '@parcel/watcher-win32-ia32': 2.4.1
       '@parcel/watcher-win32-x64': 2.4.1
 
-  /@puzzlehq/sdk-core@0.2.31(buffer@6.0.3)(react@18.2.0):
-    resolution: {integrity: sha512-2NY4EXSj5cv3/iiMlB47iWKRkF1UwVZbcgKP/tD+jJiwG8nSPtJI61Ksa5g6fgvdBcII6NnmyMSsjI5vfZeoBw==}
+  /@puzzlehq/sdk-core@0.2.32(buffer@6.0.3)(react@18.2.0):
+    resolution: {integrity: sha512-MxQfpbMqzlhLVWKti57WTXTAEpkX2xsiIyClzD5QKdC8YHdt+Otwuu2lhnjRoNIYCI3FOJQSgz7qtyAsvBBuUg==}
     peerDependencies:
       buffer: ^6.0.3
     dependencies:
