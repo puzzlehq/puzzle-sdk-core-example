@@ -8,7 +8,7 @@ import { SessionTypes } from "@walletconnect/types";
 configureConnection({
   dAppName: "Test Dapp",
   dAppDescription: "A Dapp for @puzzlehq/sdk-core testing",
-  dAppUrl: "http://localhost:5173",
+  dAppUrl: window.location.hostname,
   dAppIconURL: "https://i.kym-cdn.com/entries/icons/facebook/000/019/123/CRTX93SWIAEHlo5.jpg"
 });
 
