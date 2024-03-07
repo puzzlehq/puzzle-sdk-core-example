@@ -1,8 +1,8 @@
 import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
-import { setupConnection } from './connection.ts'
-import { GetSelectedAccountResponse, configureConnection, getWalletConnectModalSignClient } from '@puzzlehq/sdk-core';
+import { postConnectionClick, setupConnection } from './connection.ts'
+import { GetSelectedAccountResponse, configureConnection, getAccount, getWalletConnectModalSignClient } from '@puzzlehq/sdk-core';
 import { SessionTypes } from "@walletconnect/types";
 
 configureConnection({
@@ -34,6 +34,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <h1>Vite + TypeScript</h1>
     <div class="card">
       <button id="connection" type="button">Connect</button>
+      <button id="post_connection" type="button">After Connect</button>
     </div>
     <div class="card">
       <p id="address">address: ${address}</p>
@@ -45,6 +46,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 `
 
 setupConnection(document.querySelector<HTMLButtonElement>('#connection')!)
+postConnectionClick(document.querySelector<HTMLButtonElement>('#post_connection')!)
 
 getWalletConnectModalSignClient().then(async (client) => {
   client.onSessionEvent((data: any) => {
@@ -65,14 +67,7 @@ getWalletConnectModalSignClient().then(async (client) => {
   })
 
   if (session) {
-    const response: GetSelectedAccountResponse = await client.request({
-      topic: session?.topic,
-      chainId: 'aleo:3',
-      request: {
-        method: 'getSelectedAccount',
-        params: {}
-      },
-    });
+    const response: GetSelectedAccountResponse = await getAccount();
   
     document.querySelector<HTMLButtonElement>('#address')!.innerHTML = `address: ${response.account?.address}`
   }

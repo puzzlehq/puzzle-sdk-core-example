@@ -1,4 +1,4 @@
-import { connect } from "@puzzlehq/sdk-core"
+import { connect, getAccount, getEvents, getRecords } from "@puzzlehq/sdk-core"
 import { setAddress, setSession } from "./main";
 
 export function setupConnection(element: HTMLButtonElement) {
@@ -11,5 +11,23 @@ export function setupConnection(element: HTMLButtonElement) {
         document.querySelector<HTMLButtonElement>('#address')!.innerHTML = `address: ${address}`
       }
     })
+  })
+}
+
+export function postConnectionClick(element: HTMLButtonElement) {
+  element.addEventListener('click', async () => {
+    getAccount().then((res) => {
+      console.log('account', res);
+    });
+
+    getRecords({}).then((res) => {
+      console.log('records', res);
+    });
+
+    getEvents({}).then((res) => {
+      console.log('events', res);
+    });
+
+    console.log('post_connection done clicked');
   })
 }
