@@ -14,7 +14,7 @@
     "vite": "^5.1.0"
   },
   "dependencies": {
-    "@puzzlehq/sdk-core": "../puzzle-sdk/packages/core",
+    "@puzzlehq/sdk-core": "0.2.31-beta.2",
     "ws": "^8.16.0"
   }
 }
